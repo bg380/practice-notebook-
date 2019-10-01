@@ -1,0 +1,23 @@
+---
+title: "Sweets"
+---
+
+# Deliciously Guilt Free Sweets 
+
+
+## Chocolate  
+
+### Milk Chocolate {#head1} 
+
+Our **brownies** are super *delicious*, as you might expect from a ^super^ ~~gorgeous~~ delish keto company.  
+Read more about our brownies [here](https://deliciouslyguiltfree.com/collections/brownies), or read about them [here](https://diabetesand.me/deliciously-guilt-free)
+
+### Dark Chocolate  
+
+This section is about dark chocolate. You can find out more about milk chocolate by clicking [here](#head1)
+
+### White Chocolate   
+
+More details are listed below in the footer [^1]
+
+[^1] Here are some more details about white chocolate 

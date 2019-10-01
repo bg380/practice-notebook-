@@ -1,0 +1,92 @@
+---
+title: "Our delicious brownies"
+author: Basma Greef
+date: 1st October 2019 
+output:
+  html_document:
+    toc: true 
+    toc_float:  
+      collapsed: true
+---
+
+#this is the R markdown header the bit a the top- its useful to write the date. 
+
+# Header 1 {#head1}
+
+text after heading 
+
+**Bold text here**  
+*italic* text here  
+^superscript^ text here  
+~subscript~ text here  
+`code` text here  
+~~strikethrough~~ text here  
+
+## Header 2
+
+[text of link](https://deliciouslyella.com/)
+
+### Header 3
+
+text after heading 
+
+#### Header 4
+
+You can find more information in [this section](#head1) - to link to it give an ID to header 1. 
+
+Bla Bla bla [^1]
+
+[^1]:This is footer number 1.
+
+
+## Lists
+1. Item 1
+   a. subitem 
+   b. another subitem  
+2. Item 2
+3. Item 3 
+<!--do not show this on the report -->
+
+# Images
+save all images in img folder (make a new folder and call it img and put it in your working directory)
+
+ ![This is the figure caption](img/test.jpg){width=100px} 
+
+#Tables
+
+ |Column 1| Column 2|
+ |--------|---------|
+ |Item 1  | Item 2  |
+ 
+ 
+# Blocks
+
+```
+print("Hello world")
+x <- 1+2
+```
+
+# Inserting R code chunks 
+You can put include=FALSE to not include ugly bits of code that aren't needed
+```{r include=FALSE}
+
+library(tidyverse)
+pop_data <- read_csv("data/gapminder_data.csv")
+pop_data
+
+#create a table with only European countries in 2007 only, and sort it where the top one is the country with the highest life expectancy first 
+#we are going to do it the tidyverse way. 
+euro_data_tbl <- pop_data %>% 
+  filter(continent== "Europe" & year== "2007") %>% 
+  arrange(desc(lifeExp)) %>% 
+  select( -year)
+```
+The top countries in Europe that has the largest life expectancy in 2007 are shown in the table below 
+```{r echo=FALSE}
+
+library(rmarkdown)
+paged_table(euro_data_tbl)
+
+```
+
+
